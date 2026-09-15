@@ -21,3 +21,7 @@
 - [x] aria nav toggle, skip link, favicon present
 
 ## Verdict: BUILT + STATIC QA PASS → gh-pages branch deploy
+
+## Maps embed + README (2026-09-15)
+- [x] Google Maps iframe embed added to #visit panel (lazy-loaded, `output=embed`, query fused from page's own Maps URL)
+- [x] Per-site README.md added (live link, owner update guide)
