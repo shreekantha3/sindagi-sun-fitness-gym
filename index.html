@@ -1,152 +1,138 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sun Fitness Gym — Fitness</title>
-  <meta name="description" content="Sun Fitness Gym — Gym / Fitness in Sindagi, Karnataka. Rating:  ( reviews)." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              DEFAULT: "#dc2626",
-              light: "#fef2f2",
-              dark: "#7f1d1d",
-            }
-          },
-          fontFamily: {
-            sans: ['system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-          }
-        }
-      }
-    }
+  <title>Sun Fitness Gym | Gym in Sindagi</title>
+  <meta name="description" content="Sun Fitness Gym — Gym in Sindagi, Karnataka 586128. Phone not listed online — see Maps for directions." />
+  <meta property="og:title" content="Sun Fitness Gym | Gym in Sindagi" />
+  <meta property="og:description" content="Gym in Sindagi — find us on Google Maps." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" /></noscript>
+<script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ExerciseGym","name":"Sun Fitness Gym","address":{"@type":"PostalAddress","streetAddress":"1st Cross, Vidya Nagar","addressLocality":"Sindagi","addressRegion":"Karnataka","postalCode":"586128","addressCountry":"IN"},"hasMap":"https://www.google.com/maps/search/?api=1&query=Sun%20Fitness%20Gym%2C%20Sindagi%2C%20Karnataka%20586128","priceRange":"₹"}
   </script>
-  <style>
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    .anim-fade-up { animation: fadeUp 0.8s ease-out both; }
-    .anim-fade-in { animation: fadeIn 1s ease-out both; }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    .dark .glass-card {
-      background: rgba(17, 24, 39, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-  </style>
 </head>
-<body class="bg-gradient-to-br from-red-50 to-rose-100 min-h-screen text-slate-800 font-sans antialiased selection:bg-brand selection:text-white">
+<body>
+  <!-- data-missing: phone (no tel/WhatsApp CTAs on this page by design) -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:p-2 focus:bg-white">Skip to content</a>
+  <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur border-b border-amber-100">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3" aria-label="Main">
+      <a href="#" class="font-display text-lg font-bold">Sun Fitness <span class="text-brand-700">Gym</span></a>
+      <div class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#rooms" class="hover:text-brand-700">Programs</a>
+        <a href="#amenities" class="hover:text-brand-700">Facilities</a>
+        <a href="#reviews" class="hover:text-brand-700">Reviews</a>
+        <a href="#visit" class="hover:text-brand-700">Visit</a>
+      </div>
+      <div class="hidden md:flex gap-2">
+        <a href="https://www.google.com/maps/search/?api=1&query=Sun%20Fitness%20Gym%2C%20Sindagi%2C%20Karnataka%20586128" class="px-4 py-2 rounded-full bg-brand-700 text-white text-sm font-semibold hover:bg-brand-600">Get Directions</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Sun%20Fitness%20Gym%2C%20Sindagi%2C%20Karnataka%20586128" class="px-4 py-2 rounded-full border border-brand-500 text-brand-700 text-sm font-semibold">Google Maps</a>
+      </div>
+      <button id="nav-toggle" class="md:hidden p-2" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">☰</button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-amber-100 px-4 py-3 space-y-2 bg-cream">
+      <a href="#rooms" class="block py-1">Programs</a><a href="#amenities" class="block py-1">Facilities</a>
+      <a href="#reviews" class="block py-1">Reviews</a><a href="#visit" class="block py-1">Visit</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Sun%20Fitness%20Gym%2C%20Sindagi%2C%20Karnataka%20586128" class="block py-2 font-semibold text-brand-700">Get Directions</a>
+    </div>
+  </header>
 
-  <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 glass-card shadow-sm">
-    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3 group">
-        <img src="assets/logo.svg" alt="Logo" class="w-10 h-10 rounded-xl shadow-md group-hover:scale-105 transition-transform" />
-        <span class="font-bold text-lg tracking-tight text-slate-900">Sun Fitness Gym</span>
-      </a>
-      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
-        <a href="#about" class="hover:text-brand transition-colors">About</a>
-        <a href="#services" class="hover:text-brand transition-colors">Services</a>
-        <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
+  <main id="main">
+    <section class="max-w-6xl mx-auto px-4 pt-10 pb-6 grid md:grid-cols-2 gap-8 items-center">
+      <div class="reveal">
+        <p class="text-xs font-semibold tracking-widest text-brand-700 uppercase">Gym • Vidya Nagar</p>
+        <h1 class="font-display text-4xl md:text-5xl font-extrabold leading-tight mt-2">Your neighbourhood gym in Vidya Nagar, Sindagi.</h1>
+        <p class="mt-4 text-gray-700">Sun Fitness Gym is a gym at 1st Cross, Vidya Nagar for everyday strength and fitness training. Membership plans and batch timings are confirmed in person — walk in for a visit.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="https://www.google.com/maps/search/?api=1&query=Sun%20Fitness%20Gym%2C%20Sindagi%2C%20Karnataka%20586128" class="px-6 py-3 rounded-full bg-brand-700 text-white font-semibold">Get Directions</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Sun%20Fitness%20Gym%2C%20Sindagi%2C%20Karnataka%20586128" class="px-6 py-3 rounded-full border-2 border-navy font-semibold">Read Google Reviews</a>
+        </div>
+        <p class="mt-3 text-sm text-gray-600">Phone not listed — find us via Google Maps • Vidya Nagar, Sindagi</p>
+      </div>
+      <div class="reveal rounded-3xl overflow-hidden shadow-xl border border-amber-100 bg-gradient-to-br from-navy-50 to-amber-50 aspect-[4/3] grid place-items-center">
+        <div class="text-center p-8">
+          <p class="text-6xl" aria-hidden="true">💪</p>
+          <p class="font-display font-bold mt-2">Train in Vidya Nagar</p>
+          <p class="text-sm text-gray-600">Photo placeholder — replace with owner photo in <code>public/</code></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-navy text-cream py-2 overflow-hidden" aria-hidden="true">
+      <div class="marquee-track flex gap-8 whitespace-nowrap w-max px-4 text-sm font-medium">
+<span>Everyday Training • Vidya Nagar, Sindagi • Find Us on Google Maps •&nbsp;</span>
+        <span>Everyday Training • Vidya Nagar, Sindagi • Find Us on Google Maps •&nbsp;</span>
       </div>
     </div>
-  </nav>
 
-  <main class="pt-28 pb-16 px-6">
-    <div class="max-w-5xl mx-auto space-y-16">
+    <section id="rooms" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 class="font-display text-3xl font-bold reveal">Programs &amp; Membership</h2>
+      <p class="text-gray-600 mt-1 reveal">Plans &amp; batches are confirmed in person — phone not listed, no online signup yet.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+        <article class="reveal rounded-2xl border p-5 bg-white"><h3 class="font-bold">Training Floor</h3><p class="text-sm text-gray-600 mt-1">Strength and fitness equipment for everyday workouts — programs confirmed on visit</p><p class="mt-2 font-semibold">Details on visit</p></article>
+        <article class="reveal rounded-2xl border p-5 bg-white"><h3 class="font-bold">Membership</h3><p class="text-sm text-gray-600 mt-1">Membership plans and fees are confirmed in person at the gym</p><p class="mt-2 font-semibold">Confirmed in person</p></article>
+        <article class="reveal rounded-2xl border p-5 bg-white"><h3 class="font-bold">First Visit</h3><p class="text-sm text-gray-600 mt-1">Walk in during working hours for a look around — see Google Maps for the route</p><p class="mt-2 font-semibold">Walk in welcome</p></article>
+      </div>
+    </section>
 
-      <!-- Hero -->
-      <section class="anim-fade-in text-center md:text-left md:flex md:items-end md:justify-between gap-8">
-        <div class="flex-1">
-          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-brand/10 text-brand-dark mb-4">Gym / Fitness — Fitness</span>
-          <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-4 leading-[1.1]">
-            Sun Fitness Gym
-          </h1>
-          <p class="text-xl text-slate-600 mb-6 max-w-2xl">Serving Sindagi with quality and trust. Rated <span class="font-bold text-brand"> ★</span> across <span class="font-semibold"></span> reviews.</p>
-          <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-brand text-white font-semibold shadow-lg shadow-brand/30 hover:shadow-xl hover:-translate-y-0.5 transition-all">Get in touch</a>
+    <section id="amenities" class="bg-white border-y border-amber-100">
+      <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-8">
+        <div class="reveal"><h2 class="font-display text-3xl font-bold">Training &amp; Facilities</h2>
+          <p class="mt-3 text-gray-700">A straightforward neighbourhood gym in Sindagi. Since our phone isn't listed, please walk in or check the Google Maps listing for what you need before arriving — programs, batch timings and membership.</p>
+          <ul class="mt-4 space-y-1 text-sm text-gray-700"><li>✔ Everyday strength &amp; fitness training</li><li>✔ Google Maps listing with reviews</li><li>✔ Confirm details in person</li></ul>
         </div>
-        <div class="hidden md:block shrink-0">
-          <div class="w-40 h-40 rounded-full bg-gradient-to-br from-brand to-brand-dark flex items-center justify-center shadow-2xl shadow-brand/20">
-            <img src="assets/logo.svg" alt="Logo" class="w-20 h-20 rounded-2xl shadow-lg" />
-          </div>
+        <div class="reveal rounded-2xl bg-cream border p-5"><h3 class="font-bold">Good to know</h3>
+          <dl class="mt-2 text-sm space-y-2"><div class="flex justify-between"><dt class="text-gray-600">Rating</dt><dd class="font-semibold">Not listed</dd></div>
+<div class="flex justify-between"><dt class="text-gray-600">Phone</dt><dd class="font-semibold">Not listed</dd></div>
+<div class="flex justify-between"><dt class="text-gray-600">Membership</dt><dd class="font-semibold">Confirmed in person</dd></div></dl>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Info Cards -->
-      <section id="about" class="anim-fade-up grid md:grid-cols-3 gap-6">
-        <div class="glass-card rounded-3xl p-8 shadow-xl shadow-black/5 hover:-translate-y-1 transition-transform">
-          <h3 class="text-sm font-bold uppercase tracking-widest text-brand-dark mb-3">Location</h3>
-          <p class="text-slate-700 leading-relaxed">1st Cross, Vidya Nagar, Sindagi, Karnataka 586128, India</p>
-          <p class="text-slate-500 text-sm mt-1">Sindagi, Karnataka — 586128</p>
-        </div>
-        <div class="glass-card rounded-3xl p-8 shadow-xl shadow-black/5 hover:-translate-y-1 transition-transform">
-          <h3 class="text-sm font-bold uppercase tracking-widest text-brand-dark mb-3">Contact</h3>
-          <p class="text-slate-700 leading-relaxed">Phone: <a href="tel:" class="text-brand hover:underline"></a></p>
-          <p class="text-slate-500 text-sm mt-1">Reach out for inquiries and bookings.</p>
-        </div>
-        <div class="glass-card rounded-3xl p-8 shadow-xl shadow-black/5 hover:-translate-y-1 transition-transform">
-          <h3 class="text-sm font-bold uppercase tracking-widest text-brand-dark mb-3">Opportunity</h3>
-          <p class="text-5xl font-extrabold text-brand mb-1">50</p>
-          <p class="text-slate-500 text-sm">Website opportunity score. Priority: <span class="font-semibold text-brand-dark">High</span></p>
-        </div>
-      </section>
+    <section id="reviews" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 class="font-display text-3xl font-bold reveal">Reviews</h2>
+      <p class="text-gray-600 mt-1 reveal">Our Google Maps listing carries the latest reviews and photos from visitors.</p>
+      <div class="grid md:grid-cols-2 gap-4 mt-6">
+        <blockquote class="reveal rounded-2xl border bg-white p-5"><p>"Find us on Google Maps for directions, photos and reviews."</p><footer class="text-sm text-gray-600 mt-2">— Google Maps listing</footer></blockquote>
+        <blockquote class="reveal rounded-2xl border bg-white p-5"><p>"Visited us? Please leave a review on Google Maps — it helps local families find us."</p><footer class="text-sm text-gray-600 mt-2">— Sun Fitness Gym, Sindagi</footer></blockquote>
+      </div>
+      <a class="inline-block mt-4 text-brand-700 font-semibold underline" href="https://www.google.com/maps/search/?api=1&query=Sun%20Fitness%20Gym%2C%20Sindagi%2C%20Karnataka%20586128">Open our Google Maps listing →</a>
+    </section>
 
-      <!-- Services / Features -->
-      <section id="services" class="anim-fade-up">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">What we offer</h2>
-        <p class="text-slate-500 mb-8">A glimpse of our services and commitment to the community.</p>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="glass-card rounded-3xl p-8 shadow-xl shadow-black/5 hover:-translate-y-1 transition-transform">
-            <div class="w-12 h-12 rounded-2xl bg-brand/10 flex items-center justify-center mb-4">
-              <span class="text-2xl">★</span>
-            </div>
-            <h3 class="text-xl font-bold text-slate-900 mb-2">Top Rated Service</h3>
-            <p class="text-slate-600 leading-relaxed">Consistently rated <span class="font-bold text-brand"> ★</span> by customers, reflecting quality and satisfaction.</p>
-          </div>
-          <div class="glass-card rounded-3xl p-8 shadow-xl shadow-black/5 hover:-translate-y-1 transition-transform">
-            <div class="w-12 h-12 rounded-2xl bg-brand/10 flex items-center justify-center mb-4">
-              <span class="text-2xl">📍</span>
-            </div>
-            <h3 class="text-xl font-bold text-slate-900 mb-2">Local Presence</h3>
-            <p class="text-slate-600 leading-relaxed">Located at 1st Cross, Vidya Nagar, Sindagi, Karnataka 586128, India — easy to find and accessible for everyone in Sindagi.</p>
-          </div>
-          <div class="glass-card rounded-3xl p-8 shadow-xl shadow-black/5 hover:-translate-y-1 transition-transform md:col-span-2">
-            <h3 class="text-xl font-bold text-slate-900 mb-2">About Sun Fitness Gym</h3>
-            <p class="text-slate-600 leading-relaxed">Gym / Fitness serving the Sindagi community. Whether you're a regular or a first-time visitor, we strive to deliver an experience that matches our rating. Find us on <a href="https://www.google.com/maps/search/?api=1&query=Sun%20Fitness%20Gym%2C%20Sindagi%2C%20Karnataka%20586128" target="_blank" class="text-brand hover:underline font-medium">Google Maps</a>.</p>
-          </div>
+    <section id="visit" class="bg-navy text-cream">
+      <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-8">
+        <div class="reveal"><h2 class="font-display text-3xl font-bold">Visit / Contact</h2>
+          <address class="not-italic mt-3 text-cream/90 text-sm leading-relaxed">1st Cross, Vidya Nagar<br />Sindagi, Karnataka 586128,<br />India</address>
+          <p class="mt-3 text-sm text-cream/90">Phone: not listed — please use Google Maps to reach us.</p>
+          <p class="mt-1 text-sm text-cream/70">Hours: confirm in person • details confirmed in person</p>
+          <div class="mt-4 flex gap-3"><a href="https://www.google.com/maps/search/?api=1&query=Sun%20Fitness%20Gym%2C%20Sindagi%2C%20Karnataka%20586128" class="px-5 py-2 rounded-full bg-cream text-ink font-semibold text-sm">Get Directions</a></div>
         </div>
-      </section>
-
-      <!-- Map / Contact -->
-      <section id="contact" class="anim-fade-up">
-        <div class="glass-card rounded-3xl p-8 md:p-10 shadow-xl shadow-black/5">
-          <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Find us</h2>
-          <p class="text-slate-600 mb-6">Visit us at our location in Sindagi. We're here to serve you.</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Sun%20Fitness%20Gym%2C%20Sindagi%2C%20Karnataka%20586128" target="_blank" class="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-brand text-white font-semibold shadow-lg shadow-brand/30 hover:shadow-xl hover:-translate-y-0.5 transition-all">
-            <span>🗺️</span>
-            <span>Open on Google Maps</span>
-          </a>
+        <div class="reveal rounded-2xl overflow-hidden min-h-[280px] bg-white/10 grid place-items-center">
+          <p class="text-sm text-cream/70 p-6 text-center">Maps embed placeholder — owner can add iframe embed.<br /><a class="underline text-cream" href="https://www.google.com/maps/search/?api=1&query=Sun%20Fitness%20Gym%2C%20Sindagi%2C%20Karnataka%20586128">Open in Google Maps</a></p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Footer -->
-      <footer class="text-center text-slate-400 text-sm pt-8 border-t border-slate-200/60">
-        <p>© Sun Fitness Gym — Built with modern design. <a href="https://github.com" class="hover:text-brand">GitHub Pages Ready</a>.</p>
-      </footer>
-
-    </div>
+    <section class="max-w-6xl mx-auto px-4 py-12">
+<h2 class="font-display text-2xl font-bold reveal">FAQ</h2>
+      <details class="reveal mt-3 border rounded-xl p-4 bg-white"><summary class="font-semibold cursor-pointer">How do I reach you without a phone number?</summary><p class="text-sm text-gray-700 mt-1">Our phone isn't listed online yet. Please visit us at 1st Cross, Vidya Nagar, or check our <a class="underline" href="https://www.google.com/maps/search/?api=1&query=Sun%20Fitness%20Gym%2C%20Sindagi%2C%20Karnataka%20586128">Google Maps listing</a> for the route and reviews before you arrive.</p></details>
+      <details class="reveal mt-2 border rounded-xl p-4 bg-white"><summary class="font-semibold cursor-pointer">Where exactly are you?</summary><p class="text-sm text-gray-700 mt-1">Sun Fitness Gym, Sindagi, Karnataka 586128. Use <a class="underline" href="https://www.google.com/maps/search/?api=1&query=Sun%20Fitness%20Gym%2C%20Sindagi%2C%20Karnataka%20586128">Directions</a> to navigate.</p></details>
+      <details class="reveal mt-2 border rounded-xl p-4 bg-white"><summary class="font-semibold cursor-pointer">What about tariff / membership and timings?</summary><p class="text-sm text-gray-700 mt-1">Tariff and timings are confirmed in person — no online booking yet.</p></details>
+    </section>
   </main>
+
+  <footer class="border-t border-amber-100 bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-gray-600 flex flex-col md:flex-row justify-between gap-2">
+      <p>© <span id="year"></span> Sun Fitness Gym, Sindagi. All rights reserved.</p>
+      <p>Gym • Vidya Nagar, Sindagi 586128 • <a class="underline" href="https://www.google.com/maps/search/?api=1&query=Sun%20Fitness%20Gym%2C%20Sindagi%2C%20Karnataka%20586128">Maps</a></p>
+    </div>
+  </footer>
+  <a href="https://www.google.com/maps/search/?api=1&query=Sun%20Fitness%20Gym%2C%20Sindagi%2C%20Karnataka%20586128" class="md:hidden fixed bottom-4 right-4 px-5 py-3 rounded-full bg-brand-700 text-white font-bold shadow-xl" aria-label="Get directions">Directions</a>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
